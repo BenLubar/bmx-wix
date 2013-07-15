@@ -91,7 +91,7 @@ namespace Inedo.BuildMasterExtensions.WiX.UpdateProduct
         {
             var productId = args[0];
 
-            var fileName = Path.Combine(this.RemoteConfiguration.SourceDirectory, this.SourceFile);
+            var fileName = Path.Combine(this.Context.SourceDirectory, this.SourceFile);
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(fileName);
 

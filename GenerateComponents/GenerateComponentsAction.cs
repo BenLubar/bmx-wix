@@ -42,8 +42,8 @@ namespace Inedo.BuildMasterExtensions.WiX.GenerateComponents
 
         protected override string ProcessRemoteCommand(string name, string[] args)
         {
-            var rootDir = new DirectoryInfo(this.RemoteConfiguration.SourceDirectory);
-            var outFile = Path.Combine(this.RemoteConfiguration.TargetDirectory, this.FragmentFileName);
+            var rootDir = new DirectoryInfo(this.Context.SourceDirectory);
+            var outFile = Path.Combine(this.Context.TargetDirectory, this.FragmentFileName);
 
             LogInformation(string.Format("Generating {0} from {1}", outFile, rootDir.FullName));
 
